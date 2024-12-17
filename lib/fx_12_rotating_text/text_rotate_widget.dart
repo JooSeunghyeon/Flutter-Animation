@@ -11,35 +11,42 @@ class TextRotateDemo extends StatefulWidget {
 class _TextRotateDemoState extends State<TextRotateDemo> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          return SingleChildScrollView(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                minHeight: constraints.maxHeight,
-              ),
-              child: const IntrinsicHeight(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Center(
-                        child: RotatingTextWidget(
-                          text: '돌고 돌아가는 텍스트',
-                          radius: 100.0,
-                          textStyle:
-                          TextStyle(fontSize: 18, color: Colors.blue),
-                          rotationDuration: Duration(seconds: 15),
-                        ),
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          Expanded(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minHeight: constraints.maxHeight,
+                    ),
+                    child: const IntrinsicHeight(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Center(
+                              child: RotatingTextWidget(
+                                text: '돌고 돌아가는 텍스트',
+                                radius: 100.0,
+                                textStyle:
+                                TextStyle(fontSize: 18, color: Colors.blue),
+                                rotationDuration: Duration(seconds: 15),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
-              ),
+                  ),
+                );
+              },
             ),
-          );
-        },
+          ),
+        ],
       ),
     );
   }

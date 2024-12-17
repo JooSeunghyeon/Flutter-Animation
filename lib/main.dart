@@ -7,6 +7,7 @@ import 'package:flutter_animation/fx_11_typing_animation%20/typing_anim_widget.d
 import 'package:flutter_animation/fx_12_rotating_text/text_rotate_widget.dart';
 import 'package:flutter_animation/fx_7_border_beam/border_bean_widget.dart';
 import 'package:flutter_animation/fx_8_meteor_border/meteors_widget.dart';
+import 'package:flutter_animation/globe/3d_cloude_widget.dart';
 import 'package:flutter_animation/visibility/blur_fade.dart';
 
 void main() {
@@ -123,6 +124,15 @@ class HomeScreen extends StatelessWidget {
                   },
                 )),
                 child: Text('TextRotate'),
+              ),
+
+              MaterialButton(
+                onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const TechStackDemo();
+                  },
+                )),
+                child: Text('TechStack'),
               ),
             ],
           ),
