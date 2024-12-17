@@ -9,6 +9,7 @@ import 'package:flutter_animation/fx_12_rotating_text/text_rotate_widget.dart';
 import 'package:flutter_animation/fx_7_border_beam/border_bean_widget.dart';
 import 'package:flutter_animation/fx_8_meteor_border/meteors_widget.dart';
 import 'package:flutter_animation/globe/3d_cloude_widget.dart';
+import 'package:flutter_animation/particles-spark-loader%20/particles_spark_loader_widget.dart';
 import 'package:flutter_animation/particles/particles_demo.dart';
 import 'package:flutter_animation/visibility/blur_fade.dart';
 
@@ -153,6 +154,15 @@ class HomeScreen extends StatelessWidget {
                   },
                 )),
                 child: Text('Particles'),
+              ),
+
+              MaterialButton(
+                onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const ParticlesSparkLoaderDemo();
+                  },
+                )),
+                child: Text('ParticlesSparkLoaderDemo'),
               ),
             ],
           ),
