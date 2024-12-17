@@ -3,6 +3,7 @@ import 'package:flutter_animation/books/books.dart';
 import 'package:flutter_animation/circles_selector/circles_home_widget.dart';
 import 'package:flutter_animation/folder_shape/folder_home.dart';
 import 'package:flutter_animation/fx_10_hyper_text%20/hyper_text_widget.dart';
+import 'package:flutter_animation/fx_11_typing_animation%20/typing_anim_widget.dart';
 import 'package:flutter_animation/fx_7_border_beam/border_bean_widget.dart';
 import 'package:flutter_animation/fx_8_meteor_border/meteors_widget.dart';
 import 'package:flutter_animation/visibility/blur_fade.dart';
@@ -103,6 +104,15 @@ class HomeScreen extends StatelessWidget {
                   },
                 )),
                 child: Text('HyperText'),
+              ),
+
+              MaterialButton(
+                onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const TypingAnimationDemo();
+                  },
+                )),
+                child: Text('TypingAnimation'),
               ),
             ],
           ),
