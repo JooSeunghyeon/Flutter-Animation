@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/books/books.dart';
+import 'package:flutter_animation/celebrate/celebrate_widget.dart';
 import 'package:flutter_animation/circles_selector/circles_home_widget.dart';
 import 'package:flutter_animation/folder_shape/folder_home.dart';
 import 'package:flutter_animation/fx_10_hyper_text%20/hyper_text_widget.dart';
@@ -8,6 +9,7 @@ import 'package:flutter_animation/fx_12_rotating_text/text_rotate_widget.dart';
 import 'package:flutter_animation/fx_7_border_beam/border_bean_widget.dart';
 import 'package:flutter_animation/fx_8_meteor_border/meteors_widget.dart';
 import 'package:flutter_animation/globe/3d_cloude_widget.dart';
+import 'package:flutter_animation/particles/particles_demo.dart';
 import 'package:flutter_animation/visibility/blur_fade.dart';
 
 void main() {
@@ -133,6 +135,24 @@ class HomeScreen extends StatelessWidget {
                   },
                 )),
                 child: Text('TechStack'),
+              ),
+
+              MaterialButton(
+                onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const CelebrateHomeWidget();
+                  },
+                )),
+                child: Text('CelebrateHome'),
+              ),
+
+              MaterialButton(
+                onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const ParticlesDemo();
+                  },
+                )),
+                child: Text('Particles'),
               ),
             ],
           ),
